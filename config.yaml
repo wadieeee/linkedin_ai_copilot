@@ -1,0 +1,10 @@
+model: "mistral"                # Ollama model tag (e.g., "mistral", "phi3", "llama3:8b-instruct-q4")
+embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+json_path: "data/linkedin.json"
+samples_path: "data/samples.json"
+chroma_dir: "data/chroma"
+tone: "professional"            # default tone in UI
+similar_k: 3                    # how many similar items to fetch from vector DB
+max_new_tokens: 256
+temperature: 0.7
+top_p: 0.9
