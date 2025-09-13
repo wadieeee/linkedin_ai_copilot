@@ -14,11 +14,3 @@ A Streamlit-based AI assistant for LinkedIn that generates **reply suggestions**
 
 ---
 
-## Architecture
-
-```mermaid
-flowchart TD
-    A[LinkedIn UI<br>(User inputs post/comment)] --> B[services/sentiment.py<br>Analyze sentiment using DistilBERT]
-    B --> C[services/embeddings.py<br>Generate semantic embeddings with MiniLM<br>Store in FAISS database]
-    C --> D[agents/copilot_agent.py<br>Generate replies/comments using Mistral (Ollama) based on context & sentiment]
-    D --> E[Streamlit UI<br>- Display AI suggestions<br>- Show sentiment<br>- User edits & posts]
